@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selkies & Merrows - Discover the Beauty Beneath the Tides</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/package-styles.css">
+</head>
+<body>
+    <div class="mermaid-shadow"></div>
+    
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Selkies & Merrows</h1>
+            <p class="hero-subtitle">Discover the beauty beneath the tides</p>
+            <p class="hero-description">Experience the magic of freediving and scuba diving in the pristine waters of Batangas</p>
+        </div>
+    </header>
+
+    <section class="packages-preview">
+        <div class="packages-container">
+            <h2>Choose Your Diving Package</h2>
+            <p class="packages-intro">Select your preferred diving experience and number of participants</p>
+            <div class="packages-grid">
+                <div class="package-card" data-package="moonstone" data-price="2699">
+                    <h3>Moon Stone Package</h3>
+                    <p class="price">₱2,699</p>
+                    <p class="package-type">Day Tour (Whole Day Dive)</p>
+                    <ul>
+                        <li>1 Day Dive Pass</li>
+                        <li>Theory Class</li>
+                        <li>2 Open Water Dive Sessions</li>
+                        <li>Coaching Fee & Equipment</li>
+                        <li>Lunch Included</li>
+                        <li>Free Muscle Tee</li>
+                    </ul>
+                    <button class="select-package-btn" data-package="moonstone">Select Package</button>
+                </div>
+                <div class="package-card featured" data-package="crescent" data-price="3999">
+                    <div class="featured-badge">Most Popular</div>
+                    <h3>Crescent Moon Package</h3>
+                    <p class="price">₱3,999</p>
+                    <p class="package-type">2 Days & 1 Night (Aircon Room)</p>
+                    <ul>
+                        <li>2 Days Dive Pass</li>
+                        <li>Theory Class</li>
+                        <li>3 Open Water Dive Sessions</li>
+                        <li>3 Board Meals</li>
+                        <li>Aircon Accommodation</li>
+                        <li>Free Muscle Tee</li>
+                    </ul>
+                    <button class="select-package-btn" data-package="crescent">Select Package</button>
+                </div>
+                <div class="package-card" data-package="sun" data-price="3699">
+                    <h3>Sun Package</h3>
+                    <p class="price">₱3,699</p>
+                    <p class="package-type">2 Days & 1 Night (Fan Room)</p>
+                    <ul>
+                        <li>2 Days Dive Pass</li>
+                        <li>Theory Class</li>
+                        <li>3 Open Water Dive Sessions</li>
+                        <li>3 Board Meals</li>
+                        <li>Fan Room Accommodation</li>
+                        <li>Free Muscle Tee</li>
+                    </ul>
+                    <button class="select-package-btn" data-package="sun">Select Package</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="inquiry-form-section">
+        <div class="form-container">
+            <h2>Book Your Underwater Adventure</h2>
+            <p class="form-intro">Ready to explore the depths? Fill out the form below and let's plan your perfect diving experience.</p>
+            
+            <form id="funnel-form" class="inquiry-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="selectedPackage">Selected Package *</label>
+                        <select id="selectedPackage" name="selectedPackage" required>
+                            <option value="">Choose a package</option>
+                            <option value="moonstone">Moon Stone Package - ₱2,699</option>
+                            <option value="crescent">Crescent Moon Package - ₱3,999</option>
+                            <option value="sun">Sun Package - ₱3,699</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="numberOfPax">Number of Participants (Pax) *</label>
+                        <select id="numberOfPax" name="numberOfPax" required>
+                            <option value="">Select number of pax</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5 People</option>
+                            <option value="6">6 People</option>
+                            <option value="7">7 People</option>
+                            <option value="8">8 People</option>
+                            <option value="9">9 People</option>
+                            <option value="10">10+ People</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="total-cost-display" id="totalCostDisplay" style="display: none;">
+                    <h3>Total Cost: <span id="totalAmount">₱0</span></h3>
+                    <p id="costBreakdown"></p>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number *</label>
+                        <input type="tel" id="contactNumber" name="contactNumber" required placeholder="+63 XXX XXX XXXX">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address *</label>
+                        <input type="email" id="emailAddress" name="emailAddress" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="selectedDate">Preferred Date *</label>
+                        <input type="date" id="selectedDate" name="selectedDate" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="facebookLink">Facebook Account Link</label>
+                        <input type="url" id="facebookLink" name="facebookLink" placeholder="https://facebook.com/yourprofile">
+                    </div>
+                    <div class="form-group">
+                        <label for="instagramLink">Instagram Account Link</label>
+                        <input type="url" id="instagramLink" name="instagramLink" placeholder="https://instagram.com/yourprofile">
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message">Message Inquiry</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your diving experience, preferred package, or any special requests..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Submit Inquiry</span>
+                </button>
+                
+                <div class="form-message" id="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>📞 +63 976 045 9651</p>
+                <p>📞 +63 997 655 9301</p>
+                <p>✉️ selkiemerrows@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Location</h3>
+                <p>Ocean Camp Diving Resort</p>
+                <p>Bagalangit, Mabini, Batangas</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>Facebook: @selkiemerrows</p>
+                <p>Instagram: @selkiemerrows</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Selkies & Merrows. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/form-handler.js"></script>
+</body>
+</html>
